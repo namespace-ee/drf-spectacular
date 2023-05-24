@@ -122,7 +122,8 @@ def map_geo_field(serializer, geo_field_name):
     if isinstance(field, GeometrySerializerMethodField):
         warn("Geometry generation for GeometrySerializerMethodField is not supported.")
         return {}
-    model_field = get_field_info(serializer.Meta.model).fields[geo_field_name]
+    # model_field = get_field_info(serializer.Meta.model).fields[geo_field_name]
+    model_field = follow_field_source(serializer.Meta.model, field.source.split('.'))
     return build_geo_schema(model_field)
 
 

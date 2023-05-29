@@ -1,6 +1,11 @@
 Changelog
 =========
 
+0.26.3 (2023-05-23)
+-------------------
+
+- fix GIS source lookup with hops (`#989 <https://github.com/tfranzel/drf-spectacular/issues/989>`_)
+
 0.26.2 (2023-04-15)
 -------------------
 
